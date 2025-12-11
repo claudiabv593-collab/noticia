@@ -1,0 +1,78 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 6rem;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(105, 8, 108);
+    border: 2rem solid rgb(0, 0, 0);
+}
+
+.formula1{
+
+    width: 25%;
+    margin: 0 auto; 
+    border: 2px solid rgb(50, 109, 1);
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgb(132, 216, 149);
+}
+
+.formula1 fieldset{
+    border: none;   
+
+}
+
+    #formulario{
+        text-align: center;
+        font-size: 2rem;
+        font-family:  sans-serif;
+        color: rgb(7, 37, 106);
+        
+    }
+
+.Campos{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2 rem;
+    font-size: 1.8 rem;
+    font-family:  sans-serif;
+}
+
+.Campos label{
+        text-align: center;
+}       
+
+.Campo input[type="text"]{
+    
+    background-color: rgb(183, 123, 236);
+}
+
+.Campo input[type="email"]{
+    
+    background-color: rgb(97, 161, 203);
+}
+
+
+.Campo textarea{
+    height: 100px;
+    font-size: 1.6rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(178, 87, 77);
+}
+
+.formula1 button{
+    font-size: 2rem;
+    background-color: rgb(41, 70, 215);
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    width: 70%;
+    cursor: pointer;
+    border: none;
+}
