@@ -1,14 +1,36 @@
 {
   "articles": [
     {
-      "title": "Nueva tecnología impulsa el desarrollo web",
-      "description": "El uso de APIs y Fetch facilita aplicaciones dinámicas.",
-      "url": "https://example.com/noticia1"
+      "categoria": "Noticias",
+      "title": "Ultimas noticias del mundo",
+      "description": "Revisa las ultimas noticias del día no te pierdas nada.",
+      "url": "https://news.google.com/home?hl=es-419&gl=MX&ceid=MX:es-419"
     },
     {
-      "title": "JavaScript sigue siendo el lenguaje más usado",
-      "description": "Fetch y APIs REST son clave en aplicaciones modernas.",
-      "url": "https://example.com/noticia2"
+      "categoria": "Viajes",
+      "title": "Conociendo diferentes lugares de México",
+      "description": "Aqui podras encontrar todos los pueblos magicos por estados, que puedes encontrar de maravilloso y planear tu siguiente viaje.",
+      "url": "https://pueblosmagicos.mexicodesconocido.com.mx/"
+    },
+    {
+      "categoria": "Entretenimiento y Cultura",
+      "title": "Aqui encontraras lo ultimo en entretenimiento y cultura",
+      "description": "Que es lo que buscas para este fin de semana o vacaciones ven y descubre algo nuevo.",
+      "url": "https://example.com/cultura"
+    }
+    ,
+    {
+      "categoria": "Tiras Comicas",
+      "title": "Tiras comicas en español",
+      "description": "Aqui podras encontrar la tira comica diaria de Garfield en español.",
+      "url": "https://www.gocomics.com/garfieldespanol"
+    }
+    ,
+    {
+      "categoria": "Tecnologia",
+      "title": "Las diferentes caras de la tecnologia",
+      "description": "Aqui podras encontrar diferentes articulos entorno a la tecnologia mundial no te pierdas nada.",
+      "url": "https://www.bbc.com/mundo/topics/cyx5krnw38vt"
     }
   ]
 }

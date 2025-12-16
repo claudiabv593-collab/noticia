@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lector de Noticias</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Lector de Noticias</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Lector de Noticias</h1>
-    <button id="btnRefrescar">Actualizar noticias</button>
+<header class="header">
+  <h1>Lector de noticias</h1>
+  <button id="btnRefrescar">Actualizar noticias</button>
+</header>
 
-    <div id="contenedorNoticias"></div>
+<main class="periodico">
+  <div id="contenedorNoticias" class="grid"></div>
+</main>
 
-    <script src="app.js"></script>
-
+<script src="app.js" defer></script>
 </body>
 </html>

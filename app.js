@@ -1,48 +1,40 @@
-console.log("JS CARGADO OK");
-
 const contenedor = document.getElementById("contenedorNoticias");
 const btn = document.getElementById("btnRefrescar");
 
-const API = "noticias.json";
-
 async function cargarNoticias() {
-    contenedor.innerHTML = "<p>Cargando noticias...</p>";
+  contenedor.innerHTML = "<p>Cargando noticias...</p>";
 
-    try {
-        const res = await fetch(API);
+  try {
+    const res = await fetch("noticias.json");
+    const data = await res.json();
 
-        if (!res.ok) {
-            throw new Error("Error con la API");
-        }
+    mostrarNoticias(data.articles);
 
-        const datos = await res.json();
-
-        if (!datos.articles || datos.articles.length === 0) {
-            contenedor.innerHTML = "<p>No hay noticias disponibles</p>";
-            return;
-        }
-
-        mostrarNoticias(datos.articles);
-
-    } catch (error) {
-        contenedor.innerHTML = `<p style="color:red;">${error.message}</p>`;
-    }
+  } catch (error) {
+    contenedor.innerHTML = "<p>Error al cargar noticias</p>";
+  }
 }
 
 function mostrarNoticias(noticias) {
-    contenedor.innerHTML = "";
+  contenedor.innerHTML = "";
 
-    noticias.forEach(n => {
-        const div = document.createElement("div");
-        div.className = "noticia";
-        div.innerHTML = `
-            <h2 onclick="window.open('${n.url}', '_blank')">${n.title}</h2>
-            <p>${n.description || "Sin descripción"}</p>
-        `;
-        contenedor.appendChild(div);
-    });
+  noticias.forEach(n => {
+    const div = document.createElement("div");
+    div.className = "noticia";
+
+    div.innerHTML = `
+      <h2>
+        <a href="${n.url}" target="_blank" rel="noopener noreferrer">
+          ${n.title}
+        </a>
+      </h2>
+      <p>${n.description}</p>
+      <span class="categoria">${n.categoria}</span>
+    `;
+
+    contenedor.appendChild(div);
+  });
 }
 
 btn.addEventListener("click", cargarNoticias);
-
 cargarNoticias();
